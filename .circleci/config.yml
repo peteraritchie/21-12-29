@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: |
-            "echo Hello, World!"
+            echo Hello, World!
             echo export TEST='$(($RANDOM % 2)) -eq 0' >> "$BASH_ENV"
       - run: echo $TEST
       - when:
