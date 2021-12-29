@@ -27,7 +27,7 @@ jobs:
             echo export TEST='$(($RANDOM % 2)) -eq 0' >> "$BASH_ENV"
             
       - continuation/continue:
-          configuration_path: .circleci/get-approval-yml
+          configuration_path: .circleci/get-approval.yml
           
       - run: echo $TEST
 
