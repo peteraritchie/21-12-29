@@ -38,5 +38,5 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - continuation/continue:
-          configuration_path: ./.circleci/get-approval.yml
+#      - continuation/continue:
+#          configuration_path: ./.circleci/get-approval.yml
