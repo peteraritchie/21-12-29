@@ -16,12 +16,9 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: |
-            "echo Hello, World!"
-            echo export TEST='$(($RANDOM % 2)) -eq 0' >> "$BASH_ENV"
-      - run: echo $TEST
+          command: echo Hello, World!
       - when:
-          condition:  $TEST
+          condition:  $(($RANDOM % 2)) -eq 0
           steps:
             - run: |
                 echo "ding"
