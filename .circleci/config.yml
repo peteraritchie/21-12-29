@@ -15,6 +15,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
       - image: cimg/base:stable
+      
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
@@ -26,7 +27,7 @@ jobs:
             echo export TEST='$(($RANDOM % 2)) -eq 0' >> "$BASH_ENV"
             
       - continuation/continue:
-          configuration_path .circleci/get-approval-yml
+          configuration_path: .circleci/get-approval-yml
           
       - run: echo $TEST
 
