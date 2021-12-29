@@ -1,13 +1,8 @@
 version: 2.1
-jobs:
-  build:
-    docker:
-      - image: cimg/base
       
 workflows:
   version: 2
-    get-approval:
-      jobs:
-        - hold:
-            type: approval
-  
+  get-approval:
+    jobs:
+      - hold:
+        type: approval
